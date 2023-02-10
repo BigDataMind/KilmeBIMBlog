@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Ysh's Bim Blog</Name>
+    <Assembly>C:\Program Files (x86)\Bimbyte\ysh.dll</Assembly>
+    <AddInId>C0A22CBE-2C46-411F-87DD-91CCC504DC8A</AddInId>
+    <FullClassName>ysh.Main</FullClassName>
+    <VendorId>Yu Kilme</VendorId>
+    <Publisher>Yu (Bimbytesend) Kilme</Publisher>
+    <VendorDescription>Bimbytesend description, populate later,...</VendorDescription>
+  </AddIn>
+</RevitAddIns>

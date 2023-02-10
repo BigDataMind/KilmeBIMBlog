@@ -9,7 +9,8 @@ Yu Kilme
 
 ### What do I need to compile and use? ###
 * Microsoft Visual Studio Community/Pro .NET 4.8
-* Autodesk Revit 2020
+* Autodesk Revit 2018
+* Or download and install it directly [here](https://www.aliyundrive.com/s/fSFCFYC2HDT)
 
 ### Who and how do I talk to? ###
 * External cooperators on project
