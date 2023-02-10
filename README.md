@@ -10,7 +10,7 @@ Yu Kilme
 ### What do I need to compile and use? ###
 * Microsoft Visual Studio Community/Pro .NET 4.8
 * Autodesk Revit 2018
-* Or download and install it directly [here](https://www.aliyundrive.com/s/fSFCFYC2HDT)
+* Or download and install it directly [here](https://pan.baidu.com/s/1sPEbc517g5TGEz_8StcX2w?pwd=h2uc) and password is h2uc 
 
 ### Who and how do I talk to? ###
 * External cooperators on project
