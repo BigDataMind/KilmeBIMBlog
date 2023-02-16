@@ -24,7 +24,9 @@ namespace ysh
 
             // Create the ribbon panels.
             var annotateCommandsPanel =  app.CreateRibbonPanel(tabName, "Annotation Commands");
-            
+
+            var familymanagerCommandPanel = app.CreateRibbonPanel(tabName, "FamilyManager Commands");
+
 
             #region annotate
 
@@ -42,6 +44,34 @@ namespace ysh
             // Create button from provided data.
             var TagWallButton = RevitPushButton.Create(TagWallButtonData);
 
+            #endregion
+
+
+            #region family manager
+
+            var showFamilyManagerButtonData = new RevitPushButtonDataModel
+            {
+                Label = "Show Family\n Manager",
+                Panel = familymanagerCommandPanel,
+                Tooltip = "工具使用提示，\n可更换",
+                CommandNamespacePath = ShowFamilyManagerCommand.GetPath(),
+                IconImageName = "icon_showFamilyManager_32x32.png",
+                TooltipImageName = "tooltip_showFamilyManager_320x320.png"
+            };
+
+            var showFamilyManagerButton = RevitPushButton.Create(showFamilyManagerButtonData);
+
+            var hideFamilyManagerButtonData = new RevitPushButtonDataModel
+            {
+                Label = "Hide Family\n Manager",
+                Panel = familymanagerCommandPanel,
+                Tooltip = "工具使用提示，\n可更换",
+                CommandNamespacePath = ShowFamilyManagerCommand.GetPath(),
+                IconImageName = "icon_hideFamilyManager_32x32.png",
+                TooltipImageName = "tooltip_hideFamilyManager_320x320.png"
+            };
+
+            var hideFamilyManagerButton = RevitPushButton.Create(hideFamilyManagerButtonData);
             #endregion
         }
 

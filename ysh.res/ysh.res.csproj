@@ -54,5 +54,11 @@
     <EmbeddedResource Include="Images\Icons\icon_TagWallLayers_32x32.png" />
     <EmbeddedResource Include="Images\Icons\tooltip_TagWallLayers_320x320.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Icons\icon_hideFamilyManager_32x32.png" />
+    <EmbeddedResource Include="Images\Icons\icon_showFamilyManager_32x32.png" />
+    <EmbeddedResource Include="Images\Icons\tooltip_hideFamilyManager_320x320.png" />
+    <EmbeddedResource Include="Images\Icons\tooltip_showFamilyManager_320x320.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

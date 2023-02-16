@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\AnnotatePanel\FamilyManager\HideFamilyManagerCommand.cs" />
+    <Compile Include="Commands\AnnotatePanel\FamilyManager\ShowFamilyManagerCommand.cs" />
     <Compile Include="CoreAssembly.cs" />
     <Compile Include="Commands\AnnotatePanel\TagWallLayers\TagWallLayersCommand.cs" />
     <Compile Include="Commands\AnnotatePanel\TagWallLayers\TagWallLayersCommandData.cs" />
