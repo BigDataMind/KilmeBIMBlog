@@ -21,8 +21,12 @@ namespace ysh.core
         /// <returns></returns>
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            TaskDialog.Show("info", "test show...");
+            //将停靠窗口挂在Command
+            var dpid = new DockablePaneId(PaneIdentifiers.GetManagerPaneIdentifier());
+            var dp = commandData.Application.GetDockablePane(dpid);
+            dp.Show();
 
+           
             return Result.Succeeded;
         }
 

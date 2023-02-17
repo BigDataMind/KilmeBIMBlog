@@ -66,7 +66,7 @@ namespace ysh
                 Label = "Hide Family\n Manager",
                 Panel = familymanagerCommandPanel,
                 Tooltip = "工具使用提示，\n可更换",
-                CommandNamespacePath = ShowFamilyManagerCommand.GetPath(),
+                CommandNamespacePath = HideFamilyManagerCommand.GetPath(),
                 IconImageName = "icon_hideFamilyManager_32x32.png",
                 TooltipImageName = "tooltip_hideFamilyManager_320x320.png"
             };

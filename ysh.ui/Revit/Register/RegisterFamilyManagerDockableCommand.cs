@@ -1,35 +1,47 @@
 ﻿using Autodesk.Revit.UI;
 using Autodesk.Revit.DB;
+using ysh.core;
 
-namespace ysh.core
+
+namespace ysh.ui
 {
     /// <summary>
     /// 
     /// </summary>
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
     [Autodesk.Revit.Attributes.Regeneration(Autodesk.Revit.Attributes.RegenerationOption.Manual)]
-    public class HideFamilyManagerCommand : IExternalCommand
+    public class RegisterFamilyManagerDockableCommand : IExternalCommand
     {
         #region public method
-
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            return Execute(commandData.Application);
+        }
+
+
+        public Result Execute(UIApplication uiApp)
+        {
+            //
             var dpid = new DockablePaneId(PaneIdentifiers.GetManagerPaneIdentifier());
-            var dp = commandData.Application.GetDockablePane(dpid);
-            dp.Hide();
+
+            //
+            var data = new DockablePaneProviderData();
+
+            var familyMangerMainPage = new FamilyManagerMainPage();
+
+            //
+
+            data.FrameworkElement = familyMangerMainPage;
+
+            //
+            uiApp.RegisterDockablePane(dpid, "Family Manager", familyMangerMainPage );
+
+
 
 
             return Result.Succeeded;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string GetPath()
-        {
-            return typeof(HideFamilyManagerCommand).Namespace + "." + nameof(HideFamilyManagerCommand);
-        }
         #endregion
 
     }

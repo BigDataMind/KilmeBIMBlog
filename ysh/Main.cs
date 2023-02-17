@@ -5,6 +5,7 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
+using ysh.ui;
 
 #endregion
 
@@ -18,9 +19,18 @@ namespace ysh
             var ui = new SetupInterface();
             ui.Initialize(a);
 
+            //初始化界面时订阅停靠窗口
+            a.ControlledApplication.ApplicationInitialized += DockablePaneRegister;
             
 
             return Result.Succeeded;
+        }
+
+        private void DockablePaneRegister(object sender, Autodesk.Revit.DB.Events.ApplicationInitializedEventArgs e)
+        {
+            var familyManagerRegisterCommand = new RegisterFamilyManagerDockableCommand();
+
+            familyManagerRegisterCommand.Execute(new UIApplication(sender as Application));
         }
 
         public Result OnShutdown(UIControlledApplication a)
