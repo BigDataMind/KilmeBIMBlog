@@ -3,7 +3,7 @@
     using System.Windows.Media.Imaging;
 
     /// <summary>
-    /// Gets the embedded resource image from the cbb.res assembly based on user provided file name with extension.
+    /// Gets the embedded resource image from the ysh.res assembly based on user provided file name with extension.
     /// Helper methods.
     /// </summary>
     public static class ResourceImage
