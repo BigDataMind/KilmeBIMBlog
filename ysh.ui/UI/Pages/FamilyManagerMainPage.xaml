@@ -8,11 +8,21 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="FamilyManagerMainPage">
 
-    <Grid Background="CornflowerBlue">
-        <TextBlock Text="这里展示停靠窗口"
-                   FontSize="18"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="White"/>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="FamilyBtn" Content="Family" Grid.Column="0" Command="{Binding FamilyBtnCommand}"/>
+            <Button Name="PreferenceBtn" Content="Preferences" Grid.Column="1" Command="{Binding PreferencesBtnCommand}"/>
+        </Grid>
+        <Border Background="PaleVioletRed"  Grid.Row="1"/>
     </Grid>
 </Page>

@@ -1,7 +1,7 @@
 ﻿using Autodesk.Revit.UI;
 using System.Windows.Controls;
 using System;
-
+using ysh.core;
 
 namespace ysh.ui
 {
@@ -14,6 +14,7 @@ namespace ysh.ui
         public FamilyManagerMainPage()
         {
             InitializeComponent();
+            DataContext = new FamilyManagerMainViewModel();
         }
         #endregion
 
